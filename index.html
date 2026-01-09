@@ -2,150 +2,286 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8" />
-  <title>Pap Balázs — Web & E-commerce megoldások</title>
+  <title>Pap Balázs — Weboldalak, webshopok, rendszerek</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO / Social alapok -->
+  <meta name="description" content="Pap Balázs — weboldalak, webshopok és digitális rendszerek építése">
+  <meta property="og:title" content="Pap Balázs — Web & E-commerce fejlesztés">
+  <meta property="og:description" content="Gyakorlati, pénztermelő megoldások modern vállalkozóknak.">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Kis smooth scroll kényelem -->
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 
 <body class="bg-slate-950 text-slate-100 font-sans">
 
+<!-- NAV -->
+<nav class="fixed top-0 inset-x-0 z-20 bg-slate-950/80 border-b border-slate-800 backdrop-blur">
+  <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="#top" class="text-sm font-semibold tracking-wide">
+      <span class="text-sky-400">PB</span> • Web & E-commerce
+    </a>
+    <div class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+      <a href="#about" class="hover:text-sky-400 transition">Rólam</a>
+      <a href="#work" class="hover:text-sky-400 transition">Miben segítek</a>
+      <a href="#stack" class="hover:text-sky-400 transition">Tech stack</a>
+      <a href="#projects" class="hover:text-sky-400 transition">Projektek</a>
+      <a href="#contact" class="hover:text-sky-400 transition">Kapcsolat</a>
+    </div>
+  </div>
+</nav>
+
+<div id="top"></div>
+
 <!-- HERO -->
 <header class="min-h-screen flex items-center">
-  <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10 items-center">
-    <div class="space-y-6">
-      <p class="text-sm uppercase tracking-widest text-sky-400">Pap Balázs</p>
+  <div class="max-w-6xl mx-auto px-6 pt-24 pb-16 grid md:grid-cols-2 gap-10 items-center">
+    <div class="space-y-7">
+      <p class="text-xs uppercase tracking-[0.25em] text-sky-400">
+        Pap Balázs • Web & E-commerce
+      </p>
 
       <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-        Weboldalak, webshopok és digitális rendszerek<br>
-        <span class="text-sky-400">modern vállalkozóknak</span>
+        Weboldalak, webshopok és digitális rendszerek
+        <br />
+        <span class="text-sky-400">vállalkozóknak, akik tényleg növekedni akarnak</span>
       </h1>
 
-      <p class="text-lg text-slate-300">
-        WordPress, WooCommerce, Docker, Coolify, cloud.  
-        Gyakorlati megoldásokat építek — a dizájntól a technológiáig,  
-        a marketingtől a növekedésig.
+      <p class="text-base md:text-lg text-slate-300">
+        Weboldalakat, WooCommerce áruházakat és mögéjük komplett rendszereket építek.
+        A dizájn, a technológia és a marketing nálam nem külön világ – egyben gondolkodom
+        rajtuk, hogy az online jelenléted valóban pénzt termeljen.
       </p>
 
       <div class="flex gap-4 flex-wrap">
-        <a href="#work" class="px-6 py-3 rounded-xl font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 transition">
-          Nézd meg miben segítek
+        <a
+          href="#work"
+          class="px-6 py-3 rounded-xl font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 transition"
+        >
+          Nézd meg, miben tudok segíteni
         </a>
-        <a href="#contact" class="px-6 py-3 rounded-xl font-semibold border border-slate-500 hover:bg-slate-800 transition">
-          Kapcsolat
+        <a
+          href="#contact"
+          class="px-6 py-3 rounded-xl font-semibold border border-slate-500 hover:bg-slate-800 transition"
+        >
+          Írj egy rövid üzenetet
         </a>
       </div>
+
+      <p class="text-xs text-slate-500">
+        Jelenleg több saját webshopot, WordPress-es és Dockeres projektet üzemeltetek
+        — pontosan tudom, milyen problémákkal találkozik egy webshoptulajdonos.
+      </p>
     </div>
 
     <div class="flex justify-center md:justify-end">
-      <div class="w-full max-w-xs aspect-square rounded-3xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-500 text-xs">
-        (ide majd jöhet kép rólad, logóid, AI illusztráció stb.)
+      <div class="w-full max-w-xs aspect-square rounded-3xl bg-slate-900 border border-slate-800 flex flex-col items-center justify-center text-slate-400 text-xs px-5 text-center gap-2">
+        <div class="text-sm font-semibold text-slate-200">
+          Itt lehetne egy portréd vagy branded vizuál
+        </div>
+        <p class="text-[11px] leading-relaxed">
+          Addig is ez a placeholder jelképezi, hogy nem csak dizájnt,
+          hanem mögöttes rendszert is építesz: WordPress, WooCommerce, Docker,
+          Coolify, Cloudflare, AI és automatizálás.
+        </p>
       </div>
     </div>
   </div>
 </header>
 
 <!-- RÓLAM -->
-<section id="about" class="py-20 border-t border-slate-800 bg-slate-950/90">
-  <div class="max-w-4xl mx-auto px-6 space-y-6 text-center">
-    <h2 class="text-3xl font-bold">Ki vagyok?</h2>
+<section id="about" class="py-20 border-t border-slate-800 bg-slate-950/95">
+  <div class="max-w-4xl mx-auto px-6 space-y-8 text-center">
+    <h2 class="text-3xl font-bold">Ki vagyok és miben hiszek?</h2>
     <p class="text-slate-300 max-w-2xl mx-auto">
-      <strong>25 éves vállalkozó vagyok</strong>, webfejlesztő, webshop építő és rendszerszintű gondolkodó.  
-      Online vállalkozásoknak segítek fejlődni — gyorsan, valós értékkel,
-      technológiával és marketing szemlélettel.
+      <strong>25 éves vállalkozó vagyok</strong>, aki az elmúlt években saját projekteken
+      és ügyfeleken keresztül tanulta meg, hogyan viselkednek a valóságban a weboldalak,
+      webshopok és a mögöttük lévő rendszerek.
     </p>
-    <p class="text-slate-400 max-w-2xl mx-auto text-sm">
-      Aktív weboldal- és webáruház építés, hosting, automatizálás, és digitális marketing  
-      <br>— WordPress-től az egyedi fejlesztésig, AI-szupererővel.
+    <p class="text-slate-300 max-w-2xl mx-auto">
+      Nem „pixelért” vagy „frameworkért” lelkesedem, hanem azért, hogy
+      <span class="text-sky-400">stabil, gyors és átlátható alapokat</span> kapj az
+      online vállalkozásodhoz — legyen szó egy prémium crokinole márkáról vagy egy
+      szolgáltatás alapú bizniszről.
     </p>
+
+    <div class="grid md:grid-cols-3 gap-6 text-sm mt-6">
+      <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800">
+        <h3 class="font-semibold mb-1">Vállalkozói szemlélet</h3>
+        <p class="text-slate-300">
+          Nem csak kivitelezek, hanem értem a cashflow-t, szezonalitást, kapacitást.
+          Webshopként gondolkodom, nem csak fejlesztőként.
+        </p>
+      </div>
+      <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800">
+        <h3 class="font-semibold mb-1">Technikai háttér</h3>
+        <p class="text-slate-300">
+          WordPress, WooCommerce, Docker, Coolify, Cloudflare, VPS – szeretem, ha a
+          rendszer nem csak működik, hanem jól is működik.
+        </p>
+      </div>
+      <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800">
+        <h3 class="font-semibold mb-1">AI & automatizálás</h3>
+        <p class="text-slate-300">
+          Ha valamit lehet okosan automatizálni, azt automatizáljuk: GPT, n8n,
+          Activepieces, integrációk, riportok.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- AMIKBEN SEGÍTEK -->
+<!-- AMIBEN SEGÍTEK -->
 <section id="work" class="py-20 border-t border-slate-800 bg-slate-950">
   <div class="max-w-5xl mx-auto px-6 space-y-12">
-    <h2 class="text-3xl font-bold text-center">Miben számíthatsz rám?</h2>
+    <div class="text-center space-y-3">
+      <h2 class="text-3xl font-bold">Miben tudok neked segíteni?</h2>
+      <p class="text-slate-300 max-w-2xl mx-auto">
+        Nem sablonos csomagokat árulok, hanem olyan megoldásokat, amik illeszkednek
+        a vállalkozásod aktuális szintjéhez és céljaihoz.
+      </p>
+    </div>
 
     <div class="grid md:grid-cols-3 gap-8 text-sm">
       <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 space-y-2">
-        <h3 class="font-semibold text-lg">Weboldalak & Landingek</h3>
+        <h3 class="font-semibold text-lg">Weboldalak & landing oldalak</h3>
         <p class="text-slate-300">
-          Látványos, konverzióra tervezett weboldalak, akár teljesen statikus
-          AI-ból, akár WordPress-en, Elementorral.
+          Prémium, mégis letisztult oldalak, amelyek egy konkrét célt szolgálnak:
+          érdeklődő, feliratkozó vagy megrendelés legyen belőle.
         </p>
       </div>
 
       <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 space-y-2">
-        <h3 class="font-semibold text-lg">Webshopok és WooCommerce</h3>
+        <h3 class="font-semibold text-lg">WooCommerce webshopok</h3>
         <p class="text-slate-300">
-          Gyors, stabil és pénztermelő WooCommerce rendszerek  
-          terméktől a megrendeléskezelésig, automatizálással.
+          Terméklogika, kosár- és checkout-élmény, fizetési és szállítási
+          beállítások, több ország, több valuta — nem csak beállítom, értem is.
         </p>
       </div>
 
       <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 space-y-2">
-        <h3 class="font-semibold text-lg">Hosting és DevOps</h3>
+        <h3 class="font-semibold text-lg">Infrastruktúra & üzemeltetés</h3>
         <p class="text-slate-300">
-          Docker, Coolify, Cloudflare, VPS optimalizáció, domain-kezelés —  
-          mindaz, ami a háttérben stabilitást és sebességet ad.
+          Docker, Coolify, VPS, Cloudflare, domain és DNS – segítek, hogy a rendszered
+          gyors, stabil és átlátható legyen.
+        </p>
+      </div>
+
+      <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 space-y-2">
+        <h3 class="font-semibold text-lg">Technikai problémamegoldás</h3>
+        <p class="text-slate-300">
+          Lassú oldal, furcsa hibák, plugin konfliktusok, konfigurációs káosz –
+          szeretek „szétbogozni” összetett helyzeteket.
         </p>
       </div>
 
       <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 space-y-2">
         <h3 class="font-semibold text-lg">Marketing szemlélet</h3>
         <p class="text-slate-300">
-          GA4, SEO, értékajánlat, kommunikáció — nem csak megépítem,
-          hanem segítek megtölteni élettel és forgalommal is.
+          GA4, alap SEO, tracking, email alapú utánkövetés — hogy lásd, mi történik
+          a rendszeredben, ne csak érezd.
         </p>
       </div>
 
       <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 space-y-2">
-        <h3 class="font-semibold text-lg">Automatizálás & AI</h3>
+        <h3 class="font-semibold text-lg">AI-val támogatott építés</h3>
         <p class="text-slate-300">
-          n8n, Activepieces, GPT — ahol lehet, gyorsítunk és skálázunk.
-        </p>
-      </div>
-
-      <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 space-y-2">
-        <h3 class="font-semibold text-lg">Skálázás és Üzemeltetés</h3>
-        <p class="text-slate-300">
-          Nem csak indulni segítek — hanem növekedni, akár több webshopot kezelve.
+          Gyors tartalom- és layout-generálás AI-jal, amit aztán kézzel finomítok.
+          Így lesz egyszerre gyors és minőségi a végeredmény.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJEKTEK -->
-<section class="py-20 border-t border-slate-800 bg-slate-950/80">
-  <div class="max-w-5xl mx-auto px-6 space-y-10 text-center">
-    <h2 class="text-3xl font-bold">Néhány projekt és márka</h2>
-    <p class="text-slate-400 text-sm">Ezekben vagyok otthon:</p>
+<!-- TECH STACK -->
+<section id="stack" class="py-16 border-t border-slate-800 bg-slate-950/90">
+  <div class="max-w-5xl mx-auto px-6 space-y-6 text-center">
+    <h2 class="text-2xl font-bold">Tech stack, amiben otthon vagyok</h2>
+    <p class="text-slate-300 text-sm max-w-2xl mx-auto">
+      Nem az eszköz a fontos, hanem az, hogy a megfelelő helyen a megfelelő technológiát használjuk.
+      Ezekhez szoktam nyúlni, ha velem dolgozol:
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-3 text-xs">
+      <span class="px-3 py-1 rounded-full bg-slate-900 border border-slate-700">WordPress</span>
+      <span class="px-3 py-1 rounded-full bg-slate-900 border border-slate-700">WooCommerce</span>
+      <span class="px-3 py-1 rounded-full bg-slate-900 border border-slate-700">Elementor</span>
+      <span class="px-3 py-1 rounded-full bg-slate-900 border border-slate-700">Docker</span>
+      <span class="px-3 py-1 rounded-full bg-slate-900 border border-slate-700">Coolify</span>
+      <span class="px-3 py-1 rounded-full bg-slate-900 border border-slate-700">Cloudflare</span>
+      <span class="px-3 py-1 rounded-full bg-slate-900 border border-slate-700">VPS (Ubuntu)</span>
+      <span class="px-3 py-1 rounded-full bg-slate-900 border border-slate-700">n8n / Activepieces</span>
+      <span class="px-3 py-1 rounded-full bg-slate-900 border border-slate-700">OpenAI / GPT</span>
+      <span class="px-3 py-1 rounded-full bg-slate-900 border border-slate-700">GA4 / alap SEO</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJEKTEK / MÁRKÁK -->
+<section id="projects" class="py-20 border-t border-slate-800 bg-slate-950/92">
+  <div class="max-w-5xl mx-auto px-6 space-y-8 text-center">
+    <h2 class="text-3xl font-bold">Projektek és márkák, amelyekben gondolkodom</h2>
+    <p class="text-slate-300 text-sm max-w-2xl mx-auto">
+      Saját projekteken keresztül tanultam meg, hogyan viselkednek a rendszerek élesben.
+    </p>
 
     <div class="grid md:grid-cols-3 gap-6 text-sm">
-      <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">Woodestic Crokinole</div>
-      <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">Crokinole.hu</div>
-      <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">Designair Web Studio</div>
+      <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+        <div class="font-semibold mb-1">Woodestic Crokinole</div>
+        <p class="text-slate-300 text-xs">
+          Prémium crokinole táblák nemzetközi értékesítése, több webshopon és piacon keresztül.
+        </p>
+      </div>
+      <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+        <div class="font-semibold mb-1">Crokinole.hu</div>
+        <p class="text-slate-300 text-xs">
+          Magyar nyelvű márkaépítés, edukáció, content alapú értékesítés.
+        </p>
+      </div>
+      <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+        <div class="font-semibold mb-1">Designair Web Studio</div>
+        <p class="text-slate-300 text-xs">
+          Weboldalak, webshopok és rendszerek fejlesztése más vállalkozásoknak.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- KAPCSOLAT -->
-<section id="contact" class="py-20 border-t border-slate-800 bg-slate-950/90">
+<section id="contact" class="py-20 border-t border-slate-800 bg-slate-950">
   <div class="max-w-3xl mx-auto px-6 text-center space-y-6">
-    <h2 class="text-3xl font-bold">Írj nekem!</h2>
-    <p class="text-slate-300">
-      Bármilyen kérdésed van weboldallal, webshopokkal, technológiával vagy ötlettel kapcsolatban — szívesen segítek.
+    <h2 class="text-3xl font-bold">Lépjünk kapcsolatba</h2>
+    <p class="text-slate-300 max-w-2xl mx-auto">
+      Ha szimpatikus a szemléletem, írj egy rövid üzenetet arról, miben gondolkodsz
+      — egy weboldal, új webshop, rendszer-tuning vagy csak szeretnél tisztábban látni.
     </p>
 
-    <a href="mailto:balazs@designair.hu"
-       class="px-8 py-3 rounded-xl text-lg font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 transition">
-      balazs@designair.hu
-    </a>
+    <div class="space-y-3">
+      <a
+        href="mailto:balazs@designair.hu"
+        class="inline-flex items-center justify-center px-8 py-3 rounded-xl text-lg font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 transition"
+      >
+        balazs@designair.hu
+      </a>
+      <p class="text-xs text-slate-500">
+        Írj pár mondatot a jelenlegi helyzetről és arról, mi lenne számodra „siker”.
+      </p>
+    </div>
   </div>
 </section>
 
-<footer class="py-6 text-center text-xs text-slate-500 border-t border-slate-900">
-  © <span id="year"></span> Pap Balázs — Web & E-commerce fejlesztés
+<footer class="py-6 text-center text-[11px] text-slate-500 border-t border-slate-900">
+  © <span id="year"></span> Pap Balázs — Weboldalak, webshopok, rendszerek •
+  Készült statikus HTML + Tailwind + Docker + Nginx stackkel.
 </footer>
 
 <script>
